@@ -17,7 +17,10 @@ describe "user edits an article they link from a show page" do
         fill_in "article[title]", with: "New Title!"
         fill_in "article[body]",  with: "New Body!"
 
+
         click_on "Update Article"
+        # expect(page).to have_content("Article '#{article.title}' was updated.")
+
         visit article_path(article)
 
         expect(page).to have_content("New Title!")
