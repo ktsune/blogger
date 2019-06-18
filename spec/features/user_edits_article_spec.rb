@@ -4,7 +4,7 @@ describe "user edits an article they link from a show page" do
   describe "they fill in an edit field" do
     describe "and submit displays the updated information on a show" do
       it "edits a article" do
-        article = Article.create!(title: "New Title", body: "New Body")
+        article = Article.create!(title: "Title", body: "New Body")
 
         visit articles_path
         click_link article.title
